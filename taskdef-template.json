@@ -1,0 +1,21 @@
+{
+    "family": "flask-task-2",
+    "executionRoleArn": "arn:aws:iam::535002885433:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "flask-app-2",
+        "image": "<IMAGE_URI>",
+        "portMappings": [
+          {
+            "containerPort": 5000,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true
+      }
+    ],
+    "requiresCompatibilities": ["FARGATE"],
+    "cpu": "1024",
+    "memory": "3072"
+}
